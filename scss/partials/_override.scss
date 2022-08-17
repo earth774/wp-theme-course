@@ -1,0 +1,59 @@
+.container {
+  @media #{$xxl} {
+    max-width: 1100px;
+  }
+}
+.btn-primary {
+  padding: 10px 48px;
+  background-color: $green;
+  border-color: $green;
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: darken($green, 10%);
+    border-color: $green;
+  }
+}
+
+.slick-dots {
+  bottom: 20px;
+
+  li {
+    &.slick-active {
+      button {
+        &:before {
+          color: $white;
+        }
+      }
+    }
+    button {
+      padding: 0;
+      &::before {
+        font-size: 24px;
+        color: $white;
+      }
+    }
+  }
+}
+
+.wpcf7-not-valid-tip {
+  display: block;
+  margin: 4px 0 0;
+  font-size: 14px;
+}
+.wpcf7 form .wpcf7-response-output {
+  border: 0;
+  padding: 12px 20px;
+  margin: 0;
+  border-radius: 4px;
+}
+
+.wpcf7 form.invalid .wpcf7-response-output,
+.wpcf7 form.unaccepted .wpcf7-response-output,
+.wpcf7 form.payment-required .wpcf7-response-output {
+  background-color: rgba($yellow, 0.2);
+}
+
+.wpcf7 form.sent .wpcf7-response-output {
+  background-color: rgba($green, 0.2);
+}
